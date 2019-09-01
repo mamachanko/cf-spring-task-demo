@@ -1,0 +1,13 @@
+---
+applications:
+  - name: task-demo
+    path: ./target/task-demo-0.0.1-SNAPSHOT.jar
+    memory: 1G
+    disk: 1G
+    routes:
+      - route: spring-task-demo.cfapps.io
+    buildpacks:
+      - java_buildpack
+    stack: cflinuxfs3
+    services:
+      - task-demo-db
